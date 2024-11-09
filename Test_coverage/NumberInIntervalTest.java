@@ -11,11 +11,13 @@ public class NumberInIntervalTest {
 
     @BeforeEach
     void setUp() {
+        
         numberInInterval = new NumberInInterval();
     }
 
     @Test
     void numberInInterval_withinRange() {
+        
         assertThat(numberInInterval.numberInInterval(26)).isTrue();
         assertThat(numberInInterval.numberInInterval(50)).isTrue();
         assertThat(numberInInterval.numberInInterval(99)).isTrue();
@@ -23,6 +25,7 @@ public class NumberInIntervalTest {
 
     @Test
     void numberInInterval_outsideRange() {
+        
         assertThat(numberInInterval.numberInInterval(25)).isFalse();
         assertThat(numberInInterval.numberInInterval(100)).isFalse();
         assertThat(numberInInterval.numberInInterval(10)).isFalse();
